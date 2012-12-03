@@ -1,4 +1,4 @@
-
+import java.util.List;
 /**
  * Write a description of class Exercises here.
  * 
@@ -17,12 +17,11 @@ public class Exercises {
      * 
      * @return the sum of the integers
      */
-    public static Integer sum(final List<Integer> values) {        
-        if (i == list.size())
+    public static Integer sum(final List<Integer> values) {  
+        if (values.size() == 0) {
             return 0;
-        else
-            return list.get(i) + sum(list, i+1);
-    
+        }
+        return values.get(0) + sum(values.subList(1, values.size()));          
     }
     
     /**
@@ -37,7 +36,10 @@ public class Exercises {
      * @return the product of integers
      */
     public static Integer product(final List<Integer> values) {
-        
+        if (values.size() == 0) {
+            return 1;
+        }
+        return values.get(0) * product(values.subList(1, values.size()));            
     }
     
     /**
@@ -52,7 +54,7 @@ public class Exercises {
      * @return the number of non-overlapping occurences of the substring in the string 
      */
     public static Integer strCount(final String toExamine, final String sub) {
-        
+        return 0;
     }
     
     /**
@@ -69,6 +71,7 @@ public class Exercises {
      * structure of an object pointed to by a parameter. Use tail recursion if possible. 
      */
     public static boolean groupExists(final List<Integer> numbers, final int target) {
+        return true;
         
     }
    
