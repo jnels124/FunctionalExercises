@@ -54,7 +54,11 @@ public class Exercises {
      * @return the number of non-overlapping occurences of the substring in the string 
      */
     public static Integer strCount(final String toExamine, final String sub) {
-        return 0;
+        if (toExamine.indexOf(sub) == -1) {
+            return 0;
+        }
+   
+        return 1 + strCount(toExamine.substring(toExamine.indexOf(sub) + sub.length()), sub);
     }
     
     /**
@@ -69,10 +73,23 @@ public class Exercises {
      * of the for or while loop constructs. Must not use any form of the add, addAll, clear, remove, 
      * removeAll, retainAll, or set methods. Must not have side effects, including changing the 
      * structure of an object pointed to by a parameter. Use tail recursion if possible. 
+     * 
+     * TODO: Get method working correctly!
      */
     public static boolean groupExists(final List<Integer> numbers, final int target) {
-        return true;
+        if(numbers.isEmpty()) { // null check 
+            return false;
+        }
         
+        if(numbers.contains(target)) {
+            return true;
+        }
+        
+        if(sum(numbers.subList(0, numbers.size())) == (target - numbers.get(0))) {
+            return true;
+        }
+        
+        return groupExists(numbers.subList(1, numbers.size()), target);
     }
    
 }
