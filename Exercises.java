@@ -18,10 +18,13 @@ public class Exercises {
      * @return the sum of the integers
      */
     public static Integer sum(final List<Integer> values) {  
-        if (values.size() == 0) {
+        /*if (values.size() == 0) {
             return 0;
         }
-        return values.get(0) + sum(values.subList(1, values.size()));          
+        return values.get(0) + sum(values.subList(1, values.size()));*/
+        
+        return values.size() == 0 ? 
+               0 : head(values) + sum(values.subList(1, values.size()));
     }
     
     /**
@@ -36,10 +39,12 @@ public class Exercises {
      * @return the product of integers
      */
     public static Integer product(final List<Integer> values) {
-        if (values.size() == 0) {
+        /*if (values.size() == 0) {
             return 1;
-        }
-        return values.get(0) * product(values.subList(1, values.size()));            
+        }*/
+        
+        return values.size() == 0 ? 
+               1 : head(values) * product(values.subList(1, values.size()));            
     }
     
     /**
@@ -54,11 +59,12 @@ public class Exercises {
      * @return the number of non-overlapping occurences of the substring in the string 
      */
     public static Integer strCount(final String toExamine, final String sub) {
-        if (toExamine.indexOf(sub) == -1) {
+        /*if (toExamine.indexOf(sub) == -1) {
             return 0;
-        }
+        }*/
    
-        return 1 + strCount(toExamine.substring(toExamine.indexOf(sub) + sub.length()), sub);
+        return toExamine.indexOf(sub) == -1 ? 
+               0 : 1 + strCount(toExamine.substring(toExamine.indexOf(sub) + sub.length()), sub);
     }
     
     /**
@@ -74,22 +80,21 @@ public class Exercises {
      * removeAll, retainAll, or set methods. Must not have side effects, including changing the 
      * structure of an object pointed to by a parameter. Use tail recursion if possible. 
      * 
-     * TODO: Get method working correctly!
      */
     public static boolean groupExists(final List<Integer> numbers, final int target) {
-        if(numbers.isEmpty()) { // null check 
-            return false;
-        }
-        
-        if(numbers.contains(target)) {
-            return true;
-        }
-        
-        if(sum(numbers.subList(0, numbers.size())) == (target - numbers.get(0))) {
-            return true;
-        }
-        
-        return groupExists(numbers.subList(1, numbers.size()), target);
+      return target == 0 || target > 0 && head(numbers) != null &&
+             (groupExists(tail(numbers), target) || groupExists(tail(numbers), 
+                                                                target-head(numbers)));
+    }
+    
+    private static Integer head(final List<Integer> is) {
+      return is == null || is.isEmpty() ? 
+             null : is.get(0);
+    }
+    
+    private static List<Integer> tail(final List<Integer> is) {
+      return is.size() < 2 ? 
+             null : is.subList(1, is.size());
     }
    
 }
