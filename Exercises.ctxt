@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=values
+comment0.target=java.lang.Integer\ sum(java.util.List)
+comment0.text=\r\n\ (a)\ Compute\ the\ sum\ of\ a\ List\ of\ Integer\ values.\ Must\ use\ function\ application\ \r\n\ and\ recursion\ only.\ Must\ not\ use\ mutation.\ Must\ not\ use\ any\ form\ of\ the\ for\ or\ \r\n\ while\ loop\ constructs.\ Must\ not\ use\ any\ form\ of\ the\ add,\ addAll,\ clear,\ remove,\ \r\n\ removeAll,\ retainAll,\ or\ set\ methods.\ Must\ not\ have\ side\ effects,\ including\ changing\ \r\n\ the\ structure\ of\ an\ object\ pointed\ to\ by\ a\ parameter.\ Use\ tail\ recursion\ if\ possible.\ \r\n\ \r\n\ @param\ values\ the\ values\ to\ be\ added\r\n\ \r\n\ @return\ the\ sum\ of\ the\ integers\r\n
+comment1.params=values
+comment1.target=java.lang.Integer\ product(java.util.List)
+comment1.text=\r\n\ (b)\ Compute\ the\ product\ of\ a\ List\ of\ Integer\ values.\ Must\ use\ function\ application\ and\ \r\n\ recursion\ only.\ Must\ not\ use\ mutation.\ Must\ not\ use\ any\ form\ of\ the\ for\ or\ while\ loop\ \r\n\ constructs.\ Must\ not\ use\ any\ form\ of\ the\ add,\ addAll,\ clear,\ remove,\ removeAll,\ retainAll,\ \r\n\ or\ set\ methods.\ Must\ not\ have\ side\ effects,\ including\ changing\ the\ structure\ of\ an\ object\ \r\n\ pointed\ to\ by\ a\ parameter.\ Use\ tail\ recursion\ if\ possible.\ \r\n\ \r\n\ @param\ values\ the\ list\ of\ integers\ to\ be\ multiplied\r\n\ \r\n\ @return\ the\ product\ of\ integers\r\n
+comment2.params=toExamine\ sub
+comment2.target=java.lang.Integer\ strCount(java.lang.String,\ java.lang.String)
+comment2.text=\r\n\ (c)\ Given\ a\ non-null\ string\ and\ a\ non-empty\ substring,\ recursively\ compute\ the\ number\ of\ \r\n\ times\ that\ the\ substring\ appears\ in\ the\ string,\ without\ the\ substrings\ overlapping.\ For\ \r\n\ example,\ strCount("catcowcat",\ "cat")\ returns\ 2.\ Must\ use\ function\ application\ and\ recursion\ \r\n\ only.\ Must\ not\ use\ mutation.\ Must\ not\ use\ any\ form\ of\ the\ for\ or\ while\ loop\ constructs.\ Must\ \r\n\ not\ have\ side\ effects.\ Use\ tail\ recursion\ if\ possible.\ \r\n\ \r\n\ @param\ toExamine\ the\ string\ to\ be\ searched\r\n\ \r\n\ @return\ the\ number\ of\ non-overlapping\ occurences\ of\ the\ substring\ in\ the\ string\ \r\n
+comment3.params=numbers\ target
+comment3.target=boolean\ groupExists(java.util.List,\ int)
+comment3.text=\r\n\ d)\ Given\ a\ List\ of\ Integers,\ determine\ if\ it\ is\ possible\ to\ choose\ a\ group\ of\ some\ of\ \r\n\ the\ values\ such\ that\ the\ group\ sums\ to\ a\ given\ target\ value.\ \r\n\ Examples\:\ groupExists({2,\ 4,\ 9},\ 11)\ \u2192\ true\r\n\ \ \ \ \ \ \ \ \ \ \ groupExists({2,\ 4,\ 9},\ 15)\ \u2192\ true\r\n\ \ \ \ \ \ \ \ \ \ \ groupExists({2,\ 4,\ 9},\ 8)\ \u2192\ false\r\n\ \ \ \ \ \ \ \ \ \ \ groupExists({2,\ 4,\ 9,\ 2},\ 8)\ \u2192\ true\r\n\ \ \ \ \ \ \ \ \ \ \ \ \r\n\ Must\ use\ function\ application\ and\ recursion\ only.\ Must\ not\ use\ mutation.\ Must\ not\ use\ any\ form\ \r\n\ of\ the\ for\ or\ while\ loop\ constructs.\ Must\ not\ use\ any\ form\ of\ the\ add,\ addAll,\ clear,\ remove,\ \r\n\ removeAll,\ retainAll,\ or\ set\ methods.\ Must\ not\ have\ side\ effects,\ including\ changing\ the\ \r\n\ structure\ of\ an\ object\ pointed\ to\ by\ a\ parameter.\ Use\ tail\ recursion\ if\ possible.\ \r\n\ \r\n
+comment4.params=numbers
+comment4.target=java.lang.Integer\ head(java.util.List)
+comment4.text=\r\n\ Retrieve\ the\ head\ of\ the\ list\r\n\ \r\n\ @param\ numbers\ list\ of\ numbers\r\n\ \r\n\ @return\ the\ head\ of\ the\ list\r\n
+comment5.params=numbers
+comment5.target=java.util.List\ nextList(java.util.List)
+comment5.text=\r\n\ Gets\ the\ next\ list\r\n\ \r\n\ @param\ numbers\ list\ of\ numbers\r\n\ \r\n\ @return\ a\ new\ list\ with\ the\ 2nd\ element\ of\ numbers\ as\ the\ head\r\n
+numComments=6

@@ -1,9 +1,9 @@
 import java.util.List;
 /**
- * Write a description of class Exercises here.
+ * This is a class consisting of functional programming exercises
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Jesse Nelson) 
+ * @version (December 1, 2012 : Windows 8(x64) java 1.7 U9)
  */
 public class Exercises {
     /**
@@ -19,7 +19,7 @@ public class Exercises {
      */
     public static Integer sum(final List<Integer> values) {  
         return values.size() == 0 ? 
-               0 : head(values) + sum(values.subList(1, values.size()));
+               0 : head(values) + sum(nextList(values));
     }
     
     /**
@@ -35,7 +35,7 @@ public class Exercises {
      */
     public static Integer product(final List<Integer> values) {
         return values.size() == 0 ? 
-               1 : head(values) * product(values.subList(1, values.size()));            
+               1 : head(values) * product(nextList(values));            
     }
     
     /**
@@ -69,18 +69,32 @@ public class Exercises {
      * 
      */
     public static boolean groupExists(final List<Integer> numbers, final int target) {
-      return (target == 0)  ||  (head(numbers) != null) &&
-             (groupExists(tail(numbers), target) || groupExists(tail(numbers), 
-                                                                target-head(numbers)));
+      return target == 0  || (head(numbers) != null) &&
+             (groupExists(nextList(numbers), target) || 
+              groupExists(nextList(numbers), target-head(numbers)));
     }
     
+    /**
+     * Retrieve the head of the list
+     * 
+     * @param numbers list of numbers
+     * 
+     * @return the head of the list
+     */
     private static Integer head(final List<Integer> numbers) {
       return numbers == null || numbers.isEmpty() ? 
              null : numbers.get(0);
     }
     
-    private static List<Integer> tail(final List<Integer> numbers) {
-      return numbers.size() < 2 ? 
+    /**
+     * Gets the next list
+     * 
+     * @param numbers list of numbers
+     * 
+     * @return a new list with the 2nd element of numbers as the head
+     */
+    private static List<Integer> nextList(final List<Integer> numbers) {
+      return numbers.size() < 1 ? 
              null : numbers.subList(1, numbers.size());
     }
    
